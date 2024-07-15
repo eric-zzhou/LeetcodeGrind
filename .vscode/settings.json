@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.mli": "ocaml",
+    "queue": "cpp"
+  }
+}
