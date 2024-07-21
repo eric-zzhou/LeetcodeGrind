@@ -1,46 +1,37 @@
-#include <vector>
-#include <unordered_map>
 #include <deque>
+#include <unordered_map>
+#include <vector>
 using namespace std;
 
-class Node
-{
-public:
+class Node {
+ public:
   int val;
   vector<Node *> neighbors;
-  Node()
-  {
+  Node() {
     val = 0;
     neighbors = vector<Node *>();
   }
-  Node(int _val)
-  {
+  Node(int _val) {
     val = _val;
     neighbors = vector<Node *>();
   }
-  Node(int _val, vector<Node *> _neighbors)
-  {
+  Node(int _val, vector<Node *> _neighbors) {
     val = _val;
     neighbors = _neighbors;
   }
 };
 
-class BestSolution
-{
-public:
+class BestSolution {
+ public:
   unordered_map<Node *, Node *> track;
-  Node *cloneGraph(Node *node)
-  {
-    if (node == nullptr)
-    {
+  Node *cloneGraph(Node *node) {
+    if (node == nullptr) {
       return nullptr;
     }
 
-    if (track.find(node) == track.end())
-    {
+    if (track.find(node) == track.end()) {
       track[node] = new Node(node->val);
-      for (auto n : node->neighbors)
-      {
+      for (auto n : node->neighbors) {
         track[node]->neighbors.push_back(cloneGraph(n));
       }
     }
@@ -48,13 +39,10 @@ public:
   }
 };
 
-class DecentSolution
-{
-public:
-  Node *cloneGraph(Node *node)
-  {
-    if (node == nullptr)
-    {
+class DecentSolution {
+ public:
+  Node *cloneGraph(Node *node) {
+    if (node == nullptr) {
       return nullptr;
     }
 
@@ -63,14 +51,11 @@ public:
     deque<Node *> dq;
     dq.push_back(node);
 
-    while (!dq.empty())
-    {
+    while (!dq.empty()) {
       Node *curr = dq.front();
       dq.pop_front();
-      for (Node *n : curr->neighbors)
-      {
-        if (track.find(n) == track.end())
-        {
+      for (Node *n : curr->neighbors) {
+        if (track.find(n) == track.end()) {
           track[n] = new Node(n->val);
           dq.push_back(n);
         }
