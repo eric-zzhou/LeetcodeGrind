@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.mli": "ocaml",
-    "queue": "cpp"
+    "queue": "cpp",
+    "vector": "cpp"
   }
 }
