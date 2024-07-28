@@ -2,6 +2,7 @@
 # https://leetcode.com/problems/longest-increasing-subsequence/
 
 from typing import List
+from bisect import bisect_left
 
 
 class Solution:  # 68 ms, faster than 93.92%
