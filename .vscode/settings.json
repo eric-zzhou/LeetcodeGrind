@@ -2,6 +2,7 @@
   "files.associations": {
     "*.mli": "ocaml",
     "queue": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "unordered_map": "cpp"
   }
 }
