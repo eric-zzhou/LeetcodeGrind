@@ -6,6 +6,32 @@
 #include <vector>
 using namespace std;
 
+// More optimized spacewise solution by ME :)
+class Solution {
+ public:
+  int findTargetSumWays(vector<int>& nums, int target) {
+    int n = nums.size();
+    int total = accumulate(nums.begin(), nums.end(), 0);
+    int ntarget = (total - target) / 2;
+    if (total - target < 0 || (total - target) % 2) return 0;
+    vector<int> dp(ntarget + 1);
+    if (nums[0] <= ntarget) dp[nums[0]] = 1;
+    if (nums[0] == 0)
+      dp[0] = 2;
+    else
+      dp[0] = 1;
+    for (int i = 1; i < n; i++) {
+      for (int j = ntarget; j >= 0; j--) {
+        int take = 0;
+        if (j >= nums[i]) take = dp[j - nums[i]];
+        int notTake = dp[j];
+        dp[j] = take + notTake;
+      }
+    }
+    return dp[ntarget];
+  }
+};
+
 class Solution {
  public:
   int findTargetSumWays(vector<int>& nums, int target) {
