@@ -3,6 +3,7 @@
     "*.mli": "ocaml",
     "queue": "cpp",
     "vector": "cpp",
-    "unordered_map": "cpp"
+    "unordered_map": "cpp",
+    "xstring": "cpp"
   }
 }

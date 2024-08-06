@@ -1,5 +1,5 @@
 // https://neetcode.io/problems/count-subsequences
-// https://leetcode.com/problems/count-different-subsequences
+// https://leetcode.com/problems/distinct-subsequences
 
 #include <iostream>
 #include <string>

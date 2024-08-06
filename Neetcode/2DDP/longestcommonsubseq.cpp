@@ -6,6 +6,8 @@ class Solution {
  public:
   int longestCommonSubsequence(string text1, string text2) {
     int n = text1.size(), m = text2.size();
+
+    // dp[i][j] represents longest common subseq of text1[:i+1] and text2[:j+1]
     int** dp = new int*[n];
     for (int i = 0; i < n; i++) {
       dp[i] = new int[m];
@@ -30,6 +32,8 @@ class Solution {
  public:
   int longestCommonSubsequence(string text1, string text2) {
     int n = text1.size(), m = text2.size();
+
+    // track[i][j] represents longest common subseq of text1[:i] and text2[:j]
     vector<vector<int>> track(n + 1, vector<int>(m + 1));
 
     for (int i = 1; i < n + 1; i++) {
