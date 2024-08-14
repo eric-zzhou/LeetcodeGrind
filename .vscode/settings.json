@@ -6,6 +6,7 @@
     "unordered_map": "cpp",
     "xstring": "cpp",
     "iostream": "cpp",
-    "utility": "cpp"
+    "utility": "cpp",
+    "algorithm": "cpp"
   }
 }
