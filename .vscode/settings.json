@@ -8,6 +8,7 @@
     "iostream": "cpp",
     "utility": "cpp",
     "algorithm": "cpp",
-    "xhash": "cpp"
+    "xhash": "cpp",
+    "xtree": "cpp"
   }
 }
