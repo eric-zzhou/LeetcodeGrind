@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/
 
-#include <../standard.h>
+#include <standard.h>
 using namespace std;
 
 class Solution {
