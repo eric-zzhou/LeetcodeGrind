@@ -1,11 +1,9 @@
 // https://leetcode.com/problems/different-ways-to-add-parentheses
 // 09/19/2024
 
+#include <standard.h>
+
 #include <cstdlib>
-#include <iostream>
-#include <string>
-#include <unordered_map>
-#include <vector>
 using namespace std;
 
 class Solution {
